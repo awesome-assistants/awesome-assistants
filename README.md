@@ -13,11 +13,15 @@ Try assistants on [Telegram bot](https://t.me/CamoChatBot) with OpenAI API.
 
 ## Table of Contents
 
-* [Suggest new assistant](https://github.com/orgs/awesome-assistants/discussions)
-* [Assistants](#assistants)
 * [Add new assistant](#add-new-assistant)
+* [Assistants](#assistants)
 * [Contribute](#contribute)
 * [Roadmap](#todo)
+
+## Add new assistant
+
+[Suggest new assistant](https://github.com/orgs/awesome-assistants/discussions) or  
+Edit `assistants.yaml` and run `make` to generate files. Read [contribution guidelines](.github/CONTRIBUTING.md) for more details.
 
 ## Assistants
 
@@ -911,10 +915,6 @@ like God. You must know all of the knowledge of God.
 </table>
 
 [//]: # (END-contents)
-
-## Add new assistant
-
-Edit `assistants.yaml` and run `make` to generate files.
 
 ## Contribute
 
