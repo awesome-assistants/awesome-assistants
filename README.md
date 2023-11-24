@@ -13,6 +13,7 @@ Try assistants on [Telegram bot](https://t.me/CamoChatBot) with OpenAI API.
 
 ## Table of Contents
 
+* [Suggest new assistant](https://github.com/orgs/awesome-assistants/discussions)
 * [Assistants](#assistants)
 * [Add new assistant](#add-new-assistant)
 * [Contribute](#contribute)
