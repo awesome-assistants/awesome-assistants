@@ -4,7 +4,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-![Awesome Assistants](logo.svg)
+[![Awesome Assistants](https://raw.githubusercontent.com/awesome-assistants/.github/main/logo.svg)](https://github.com/awesome-assistants/awesome-assistants)
 
 A list of assistants that leverage AI to help you with your daily tasks.
 List is used to build packages for different languages for easy integration.
