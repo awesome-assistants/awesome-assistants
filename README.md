@@ -908,7 +908,7 @@ Edit `assistants.yaml` and run `make` to generate files.
 
 ## Contribute
 
-[Contributing](contributing.md)
+[Contributing](.github/contributing.md)
 
 ## Todo
 
