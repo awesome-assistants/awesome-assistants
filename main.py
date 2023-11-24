@@ -45,13 +45,11 @@ def replace_text_between(original_text, delimeter_a, delimter_b, replacement_tex
 
 
 def get_assistants_markdown():
-    assistants = get_assistants()
     md = ""
-    for key, entry in assistants.items():
+    for key, entry in get_assistants().items():
         md += f"### {entry['emoji']} {entry['name']}\n"
         md += f"{entry['welcome_message']} \n"
         md += f"\n>{entry['prompt_start']} \n"
-        md += f"\n --- \n"
     return md
 
 
