@@ -9,6 +9,15 @@
 A list of assistants that leverage AI to help you with your daily tasks.
 List is used to build packages for different languages for easy integration.
 
+Try assistants on [Telegram bot](https://t.me/CamoChatBot) with OpenAI API.
+
+## Table of Contents
+
+* [Assistants](#assistants)
+* [Add new assistant](#add-new-assistant)
+* [Contribute](#contribute)
+* [Roadmap](#todo)
+
 ## Assistants
 
 - `json` - [assistants.json](build/assistants.json)
