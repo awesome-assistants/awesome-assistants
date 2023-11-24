@@ -9,14 +9,17 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def build():
+def get_assistants():
     assistants_yml = pathlib.Path(__file__).parent.resolve().joinpath("assistants.yml")
     with open(assistants_yml, 'r') as f:
         assistants = yaml.safe_load(f)
+    return assistants
 
+
+def build():
     dataset = tablib.Dataset()
     dataset.headers = ['assistant', 'name', 'emoji', 'welcome_message', 'prompt_start', 'parse_mode']
-    for key, entry in assistants.items():
+    for key, entry in get_assistants().items():
         logger.info('Processing assistant: %s', key)
         dataset.append([key, entry['name'], entry['emoji'], entry['welcome_message'], entry['prompt_start'], entry['parse_mode']])
 
@@ -41,15 +44,23 @@ def replace_text_between(original_text, delimeter_a, delimter_b, replacement_tex
     return leading_text + delimeter_a + replacement_text + delimter_b + trailing_text
 
 
+def get_assistants_markdown():
+    assistants = get_assistants()
+    md = ""
+    for key, entry in assistants.items():
+        md += f"### {entry['emoji']} {entry['name']}\n"
+        md += f"**Welcome message**: {entry['welcome_message']} \n"
+        md += f"\n**Prompt**: {entry['prompt_start']} \n"
+    return md
+
+
 def update_readme():
     readme_file = pathlib.Path(__file__).parent.resolve().joinpath("README.md")
-    html = pathlib.Path(__file__).parent.resolve().joinpath("build/assistants.html")
-    with open(html) as f:
-        toc_str = f.read()
     start = '[//]: # (START-contents)'
     end = '[//]: # (END-contents)'
     with open(readme_file) as f:
         readme_stub = f.read()
+    toc_str = get_assistants_markdown()
     readme = replace_text_between(readme_stub, start, end, "\n"+toc_str+"\n\n")
     if readme_stub != readme:
         with open(readme_file, 'w') as f:
