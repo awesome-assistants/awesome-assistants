@@ -49,8 +49,9 @@ def get_assistants_markdown():
     md = ""
     for key, entry in assistants.items():
         md += f"### {entry['emoji']} {entry['name']}\n"
-        md += f"**Welcome message**: {entry['welcome_message']} \n"
-        md += f"\n**Prompt**: {entry['prompt_start']} \n"
+        md += f"{entry['welcome_message']} \n"
+        md += f"\n>{entry['prompt_start']} \n"
+        md += f"\n --- \n"
     return md
 
 
