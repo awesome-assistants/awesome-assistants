@@ -923,11 +923,10 @@ Edit `assistants.yaml` and run `make` to generate files.
 
 Looking for contributions to help with the following:
 
-- [ ] group assistants into categories
-- [ ] create pip package
-- [ ] create npm package
-- [ ] create ruby gem
-- [ ] create go package
-- [ ] create rust package
-- [ ] create java package
-- [ ] create php package
+- [ ] group [assistants](assistants.yml) into categories
+- [ ] create [pip package](https://github.com/awesome-assistants/awwssistant-python)
+- [ ] create [npm package](https://github.com/awesome-assistants/awwssistant-node)
+- [ ] create [ruby gem](https://github.com/awesome-assistants/awwssistant-ruby)
+- [ ] create [go package](https://github.com/awesome-assistants/awwssistant-go)
+- [ ] create [rust package](https://github.com/awesome-assistants/awwssistant-rust)
+- [ ] create [php package](https://github.com/awesome-assistants/awwssistant-php)
