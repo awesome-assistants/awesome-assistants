@@ -18,6 +18,7 @@ run:
 	$(CMD_PYTHON) main.py
 
 lint:
+	./$(VENV)/bin/yamllint .github/workflows/ci.yml
 	./$(VENV)/bin/yamllint assistants.yml -d "{extends: default, rules: {line-length: {max: 120}}}"
 
 clean:
