@@ -5,7 +5,7 @@ VENV := .venv
 CMD_PYTHON = ./$(VENV)/bin/python3
 
 # default target, when make executed without arguments
-all: venv run
+all: venv run lint
 
 $(VENV)/bin/activate: requirements.txt
 	python3 -m venv $(VENV)
@@ -17,9 +17,12 @@ venv: $(VENV)/bin/activate
 run:
 	$(CMD_PYTHON) main.py
 
+lint:
+	./$(VENV)/bin/yamllint assistants.yml -d "{extends: default, rules: {line-length: {max: 120}}}"
+
 clean:
 	rm -rf $(VENV)
 	rm -rf .pytest_cache
 	find . -type f -name '*.pyc' -delete
 
-.PHONY: all venv run clean
+.PHONY: all venv run lint clean
