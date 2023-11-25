@@ -53,6 +53,7 @@ def get_assistants_markdown():
         md += f"\n ### {entry['name']}\n\n"
         md += f"{entry['emoji']} {entry['welcome_message']} \n"
         md += f"\n```\n{entry['prompt_start']}\n``` \n"
+        md += f"\n[↑ Go Back](#assistants)\n"
     return md
 
 
