@@ -28,8 +28,8 @@ def build():
     to_file(dataset, 'html')
     to_file(dataset, 'latex')
     to_file(dataset, 'tsv')
-    to_file(dataset, 'xlsx', 'wb')
-    to_file(dataset, 'ods', 'wb')
+    # to_file(dataset, 'xlsx', 'wb')
+    # to_file(dataset, 'ods', 'wb')
 
 
 def to_file(dataset, format, bin='w'):
