@@ -20,7 +20,7 @@ def build():
     dataset = tablib.Dataset()
     dataset.headers = ['assistant', 'name', 'emoji', 'welcome_message', 'prompt_start', 'parse_mode']
     for key, entry in get_assistants().items():
-        logger.info('Processing assistant: %s', key)
+        # logger.info('Processing assistant: %s', key)
         dataset.append([key, entry['name'], entry['emoji'], entry['welcome_message'], entry['prompt_start'], entry['parse_mode']])
 
     to_file(dataset, 'csv')
@@ -68,6 +68,8 @@ def update_readme():
     if readme_stub != readme:
         with open(readme_file, 'w') as f:
             f.write(readme)
+    else:
+        logger.info('README.md is up to date.')
 
 
 if __name__ == "__main__":
