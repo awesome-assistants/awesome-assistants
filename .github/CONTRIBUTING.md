@@ -13,3 +13,25 @@ Please ensure your pull request adheres to the following guidelines:
 
 Thank you for your suggestions!
 
+## Assistant object
+
+https://platform.openai.com/docs/api-reference/assistants/object
+
+```json    
+    {
+      "id": "asst_abc123",
+      "object": "assistant",
+      "created_at": 1698984975,
+      "name": "Math Tutor",
+      "description": null,
+      "model": "gpt-4",
+      "instructions": "You are a personal math tutor. When asked a question, write and run Python code to answer the question.",
+      "tools": [
+        {
+          "type": "code_interpreter"
+        }
+      ],
+      "file_ids": [],
+      "metadata": {}
+    }
+```
