@@ -18,10 +18,10 @@ def get_assistants():
 
 def build():
     dataset = tablib.Dataset()
-    dataset.headers = ['assistant', 'name', 'emoji', 'welcome_message', 'prompt_start', 'parse_mode']
+    dataset.headers = ['assistant', 'name', 'emoji', 'welcome_message', 'instructions', 'parse_mode']
     for key, entry in get_assistants().items():
         # logger.info('Processing assistant: %s', key)
-        dataset.append([key, entry['name'], entry['emoji'], entry['welcome_message'], entry['prompt_start'], entry['parse_mode']])
+        dataset.append([key, entry['name'], entry['emoji'], entry['welcome_message'], entry['instructions'], entry['parse_mode']])
 
     to_file(dataset, 'csv')
     to_file(dataset, 'json')
@@ -52,7 +52,7 @@ def get_assistants_markdown():
     for key, entry in get_assistants().items():
         md += f"\n ### {entry['name']}\n\n"
         md += f"{entry['emoji']} {entry['welcome_message']} \n"
-        md += f"\n```\n{entry['prompt_start']}\n``` \n"
+        md += f"\n```\n{entry['instructions']}\n``` \n"
         md += f"\n[↑ Go Back](#assistants)\n"
     return md
 
