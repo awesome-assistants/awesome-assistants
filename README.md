@@ -1453,7 +1453,7 @@ None
 
 ## Contribute
 
-[Contributing](.github/contributing.md)
+[Contributing](.github/CONTRIBUTING.md)
 
 ## Todo
 
