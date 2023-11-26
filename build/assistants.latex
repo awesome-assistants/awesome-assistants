@@ -5,7 +5,7 @@
   %
   \begin{tabular}{lrrrrr}
     \toprule
-      assistant & name & emoji & welcome\_message & instructions & parse\_mode \\
+      id & name & emoji & welcome\_message & instructions & parse\_mode \\
     \cmidrule(r){1-1} \cmidrule(lr){2-2} \cmidrule(lr){3-3} \cmidrule(lr){4-4} \cmidrule(lr){5-5} \cmidrule(l){6-6}
       assistant & General Assistant & 👩🏼‍🎓 & Hi, I'm <b>General Assistant</b>. How can I help you? & As an advanced chatbot Assistant, your primary goal is to assist users to the best of your ability.
 This may involve answering questions, providing helpful information, or completing tasks based on user input.

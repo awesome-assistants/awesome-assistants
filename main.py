@@ -18,7 +18,7 @@ def get_assistants():
 
 def build():
     dataset = tablib.Dataset()
-    dataset.headers = ['assistant', 'name', 'emoji', 'welcome_message', 'instructions', 'parse_mode']
+    dataset.headers = ['id', 'name', 'emoji', 'welcome_message', 'instructions', 'parse_mode']
     for key, entry in get_assistants().items():
         # logger.info('Processing assistant: %s', key)
         dataset.append([key, entry['name'], entry['emoji'], entry['welcome_message'], entry['instructions'], entry['parse_mode']])
