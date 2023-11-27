@@ -1,3 +1,3 @@
 tablib[all]==3.5.0
-PyYAML==6.0
+ruamel.yaml==0.18.5
 yamllint==1.33.0

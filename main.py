@@ -5,6 +5,7 @@ import logging
 import argparse
 import re
 
+
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
 )
@@ -23,7 +24,8 @@ class AwesomeAssistantsBuilder:
         if self.config.parse_prompts_folder:
             d = self.parse_prompts_folder()
             with open(f'build/for-import.yml', 'wb') as file:
-                file.write(yaml.dump(d, encoding=('utf-8')))
+                file.write(yaml.dump(d, default_flow_style=False,
+                           allow_unicode=True).encode('utf-8'))
 
     def get_assistants(self):
         assistants_yml = pathlib.Path(__file__).parent.resolve().joinpath("assistants.yml")
@@ -74,14 +76,14 @@ class AwesomeAssistantsBuilder:
                 if content_link != '':
                     continue
 
-                dataset.append({'id': id,
-                                'name': name,
+                dataset.append({id: {
                                 'emoji': "🤖",
+                                'name': name,
                                 'instructions': i,
                                 'welcome_message': welcome,
                                 'parse_mode': 'markdown',
                                 'category': 'gpt'
-                                })
+                                }})
 
         logger.info('Processed %s assistants', len(dataset))
         return dataset
