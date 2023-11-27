@@ -22,8 +22,8 @@ class AwesomeAssistantsBuilder:
             self.update_readme()
         if self.config.parse_prompts_folder:
             d = self.parse_prompts_folder()
-            with open(f'build/for-import.yml', 'w') as file:
-                file.write(yaml.dump(d))
+            with open(f'build/for-import.yml', 'wb') as file:
+                file.write(yaml.dump(d, encoding=('utf-8')))
 
     def get_assistants(self):
         assistants_yml = pathlib.Path(__file__).parent.resolve().joinpath("assistants.yml")
@@ -66,7 +66,7 @@ class AwesomeAssistantsBuilder:
                 links = re.findall(url_extract_pattern, i)
                 id = file.stem.replace(' ', '_').lower()
                 name = file.stem.replace('_', ' ').title()
-                welcome = f"Hi, I am <b>{name}</b>. How can I help you?"
+                welcome = f"Hi, I am <b>{name}</b>"
                 i = self.find_between(i, '```markdown', '```')
 
                 # skip agents that have ads inside
@@ -74,14 +74,14 @@ class AwesomeAssistantsBuilder:
                 if content_link != '':
                     continue
 
-                dataset.append([{'id': id,
+                dataset.append({'id': id,
                                 'name': name,
                                 'emoji': "🤖",
                                 'instructions': i,
                                 'welcome_message': welcome,
                                 'parse_mode': 'markdown',
                                 'category': 'gpt'
-                                }])
+                                })
 
         logger.info('Processed %s assistants', len(dataset))
         return dataset
