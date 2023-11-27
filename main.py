@@ -107,11 +107,12 @@ class AwesomeAssistantsBuilder:
     def get_assistants_markdown(self):
         assistants = self.get_assistants()
         md = ""
+        md += "\n" + "Total assistants: " + str(len(assistants)) + "\n\n"
         for key, entry in assistants.items():
-            md += f"- [{entry['emoji']} {entry['name']}](#{key.replace('_', '-')})\n"
+            md += f"1. [{entry['emoji']} {entry['name']}](#{key.replace('_', '-')})\n"
 
         for key, entry in assistants.items():
-            md += f"\n ### {entry['name']}\n\n"
+            md += f"\n### {entry['name']}\n\n"
             md += f"{entry['emoji']} {entry['welcome_message']} \n"
             md += f"\n```\n{entry['instructions']}\n``` \n"
             md += f"\n[↑ Go Back](#assistants)\n"
