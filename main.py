@@ -2,6 +2,7 @@ import tablib
 import yaml
 import pathlib
 import logging
+import argparse
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
@@ -9,69 +10,82 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def get_assistants():
-    assistants_yml = pathlib.Path(__file__).parent.resolve().joinpath("assistants.yml")
-    with open(assistants_yml, 'r') as f:
-        assistants = yaml.safe_load(f)
-    return assistants
+class AwesomeAssistantsBuilder:
+    def __init__(self, config):
+        self.config = config
+
+    def run(self):
+        if self.config.export:
+            self.build()
+        if self.config.update_readme:
+            self.update_readme()
+
+    def get_assistants(self):
+        assistants_yml = pathlib.Path(__file__).parent.resolve().joinpath("assistants.yml")
+        with open(assistants_yml, 'r') as f:
+            assistants = yaml.safe_load(f)
+        return assistants
+
+    def build(self):
+        assistants = self.get_assistants()
+        dataset = tablib.Dataset()
+        dataset.headers = ['id', 'name', 'emoji', 'welcome_message', 'instructions', 'parse_mode']
+        for key, entry in assistants.items():
+            dataset.append([key, entry['name'], entry['emoji'], entry['welcome_message'], entry['instructions'],
+                            entry['parse_mode']])
+
+        self.to_file(dataset, 'csv')
+        self.to_file(dataset, 'yaml')
+        self.to_file(dataset, 'json')
+        self.to_file(dataset, 'html')
+        self.to_file(dataset, 'latex')
+        self.to_file(dataset, 'tsv')
+
+    @staticmethod
+    def to_file(dataset, format, bin='w'):
+        data = dataset.export(format)
+        with open(f'build/assistants.{format}', bin) as file:
+            file.write(data)
+
+    @staticmethod
+    def replace_text_between(original_text, delimiter_a, delimiter_b, replacement_text):
+        leading_text = original_text.split(delimiter_a)[0]
+        trailing_text = original_text.split(delimiter_b)[1]
+        return leading_text + delimiter_a + replacement_text + delimiter_b + trailing_text
+
+    def get_assistants_markdown(self):
+        assistants = self.get_assistants()
+        md = ""
+        for key, entry in assistants.items():
+            md += f"- [{entry['emoji']} {entry['name']}](#{key.replace('_', '-')})\n"
+
+        for key, entry in assistants.items():
+            md += f"\n ### {entry['name']}\n\n"
+            md += f"{entry['emoji']} {entry['welcome_message']} \n"
+            md += f"\n```\n{entry['instructions']}\n``` \n"
+            md += f"\n[↑ Go Back](#assistants)\n"
+        return md
+
+    def update_readme(self):
+        readme_file = pathlib.Path(__file__).parent.resolve().joinpath("README.md")
+        start = '[//]: # (START-contents)'
+        end = '[//]: # (END-contents)'
+        with open(readme_file) as f:
+            readme_stub = f.read()
+        toc_str = self.get_assistants_markdown()
+        readme = self.replace_text_between(readme_stub, start, end, "\n" + toc_str + "\n\n")
+        if readme_stub != readme:
+            with open(readme_file, 'w') as f:
+                f.write(readme)
+        else:
+            logger.info('README.md is up to date.')
 
 
-def build():
-    dataset = tablib.Dataset()
-    dataset.headers = ['id', 'name', 'emoji', 'welcome_message', 'instructions', 'parse_mode']
-    for key, entry in get_assistants().items():
-        # logger.info('Processing assistant: %s', key)
-        dataset.append([key, entry['name'], entry['emoji'], entry['welcome_message'], entry['instructions'], entry['parse_mode']])
-
-    to_file(dataset, 'csv')
-    to_file(dataset, 'json')
-    to_file(dataset, 'html')
-    to_file(dataset, 'latex')
-    to_file(dataset, 'tsv')
-    # to_file(dataset, 'xlsx', 'wb')
-    # to_file(dataset, 'ods', 'wb')
-
-
-def to_file(dataset, format, bin='w'):
-    data = dataset.export(format)
-    with open('build/assistants.'+format, bin) as file:
-        file.write(data)
-
-
-def replace_text_between(original_text, delimeter_a, delimter_b, replacement_text):
-    leading_text = original_text.split(delimeter_a)[0]
-    trailing_text = original_text.split(delimter_b)[1]
-    return leading_text + delimeter_a + replacement_text + delimter_b + trailing_text
-
-
-def get_assistants_markdown():
-    md = ""
-    for key, entry in get_assistants().items():
-        md += f"- [{entry['emoji']} {entry['name']}](#{key.replace('_', '-')})\n"
-
-    for key, entry in get_assistants().items():
-        md += f"\n ### {entry['name']}\n\n"
-        md += f"{entry['emoji']} {entry['welcome_message']} \n"
-        md += f"\n```\n{entry['instructions']}\n``` \n"
-        md += f"\n[↑ Go Back](#assistants)\n"
-    return md
-
-
-def update_readme():
-    readme_file = pathlib.Path(__file__).parent.resolve().joinpath("README.md")
-    start = '[//]: # (START-contents)'
-    end = '[//]: # (END-contents)'
-    with open(readme_file) as f:
-        readme_stub = f.read()
-    toc_str = get_assistants_markdown()
-    readme = replace_text_between(readme_stub, start, end, "\n"+toc_str+"\n\n")
-    if readme_stub != readme:
-        with open(readme_file, 'w') as f:
-            f.write(readme)
-    else:
-        logger.info('README.md is up to date.')
-
-
-if __name__ == "__main__":
-    build()
-    update_readme()
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-e", "--export", dest="export",
+                        default=True, action='store_true', help="Build files")
+    parser.add_argument("-ur", "--update-readme", dest="update_readme",
+                        default=True, action='store_true', help="Update README.md file")
+    aww = AwesomeAssistantsBuilder(parser.parse_args())
+    aww.run()
