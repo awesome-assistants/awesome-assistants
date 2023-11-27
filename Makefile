@@ -15,11 +15,14 @@ $(VENV)/bin/activate: requirements.txt
 venv: $(VENV)/bin/activate
 
 run:
-	$(CMD_PYTHON) main.py
+	$(CMD_PYTHON) main.py -e -ur
 
 lint:
 	./$(VENV)/bin/yamllint .github/workflows/ci.yml
 	./$(VENV)/bin/yamllint assistants.yml -d "{extends: default, rules: {line-length: {max: 120}}}"
+
+ppf:
+	$(CMD_PYTHON) main.py -ppf
 
 clean:
 	rm -rf $(VENV)

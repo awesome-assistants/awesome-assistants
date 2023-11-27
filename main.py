@@ -3,6 +3,7 @@ import yaml
 import pathlib
 import logging
 import argparse
+import re
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
@@ -19,6 +20,10 @@ class AwesomeAssistantsBuilder:
             self.build()
         if self.config.update_readme:
             self.update_readme()
+        if self.config.parse_prompts_folder:
+            d = self.parse_prompts_folder()
+            with open(f'build/for-import.yml', 'w') as file:
+                file.write(yaml.dump(d))
 
     def get_assistants(self):
         assistants_yml = pathlib.Path(__file__).parent.resolve().joinpath("assistants.yml")
@@ -41,11 +46,55 @@ class AwesomeAssistantsBuilder:
         self.to_file(dataset, 'latex')
         self.to_file(dataset, 'tsv')
 
+    # Method was used to parse prompts from https://github.com/LouisShark/chatgpt_system_prompt/tree/main/prompts/gpts
+    # used one time, but might be used in the future
+    def parse_prompts_folder(self):
+        dataset = []
+
+        assistants = pathlib.Path(__file__).parent.joinpath("prompts")
+        files = [f for f in assistants.iterdir() if f.is_file()]
+        for file in files:
+            with open(file, 'r') as f:
+                if file.name.startswith('.'):
+                    continue
+
+                # logger.info('Processing assistant: %s', f.name)
+                i = f.read()
+
+                # Extract URL from a string
+                url_extract_pattern = "https?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*)|$"
+                links = re.findall(url_extract_pattern, i)
+                id = file.stem.replace(' ', '_').lower()
+                name = file.stem.replace('_', ' ').title()
+                welcome = f"Hi, I am <b>{name}</b>. How can I help you?"
+                i = self.find_between(i, '```markdown', '```')
+
+                # skip agents that have ads inside
+                content_link = re.findall(url_extract_pattern, i)[0]
+                if content_link != '':
+                    continue
+
+                dataset.append([{'id': id,
+                                'name': name,
+                                'emoji': "🤖",
+                                'instructions': i,
+                                'welcome_message': welcome,
+                                'parse_mode': 'markdown',
+                                'category': 'gpt'
+                                }])
+
+        logger.info('Processed %s assistants', len(dataset))
+        return dataset
+
     @staticmethod
     def to_file(dataset, format, bin='w'):
         data = dataset.export(format)
         with open(f'build/assistants.{format}', bin) as file:
             file.write(data)
+
+    @staticmethod
+    def find_between(s, start, end):
+        return s.split(start)[1].split(end)[0].strip()
 
     @staticmethod
     def replace_text_between(original_text, delimiter_a, delimiter_b, replacement_text):
@@ -84,8 +133,10 @@ class AwesomeAssistantsBuilder:
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-e", "--export", dest="export",
-                        default=True, action='store_true', help="Build files")
+                        default=False, action='store_true', help="Build files")
     parser.add_argument("-ur", "--update-readme", dest="update_readme",
-                        default=True, action='store_true', help="Update README.md file")
+                        default=False, action='store_true', help="Update README.md file")
+    parser.add_argument("-ppf", "--parse-prompts-folder", dest="parse_prompts_folder",
+                        default=False, action='store_true', help="One time method")
     aww = AwesomeAssistantsBuilder(parser.parse_args())
     aww.run()
