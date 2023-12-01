@@ -26,12 +26,25 @@ class AwesomeAssistantsBuilder:
             assistants = yaml.safe_load(f)
         return assistants
 
+    def get_assistant(self, search_id):
+        for x in self.get_assistants():
+            if x['id'] == search_id:
+                break
+        else:
+            x = None
+        return x
+
     def build(self):
         assistants = self.get_assistants()
         dataset = tablib.Dataset()
         dataset.headers = ['id', 'name', 'emoji', 'welcome_message', 'instructions', 'parse_mode']
-        for key, entry in assistants.items():
-            dataset.append([key, entry['name'], entry['emoji'], entry['welcome_message'], entry['instructions'],
+        for entry in assistants:
+            logger.debug(entry['id'])
+            dataset.append([entry['id'],
+                            entry['name'],
+                            entry['emoji'],
+                            entry['welcome_message'],
+                            entry['instructions'],
                             entry['parse_mode']])
 
         self.to_file(dataset, 'csv')
@@ -56,10 +69,10 @@ class AwesomeAssistantsBuilder:
     def get_assistants_markdown(self):
         assistants = self.get_assistants()
         md = ""
-        for key, entry in assistants.items():
-            md += f"- [{entry['emoji']} {entry['name']}](#{key.replace('_', '-')})\n"
+        for entry in assistants:
+            md += f"1. [{entry['emoji']} {entry['name']}](#{entry['id'].replace('_', '-')})\n"
 
-        for key, entry in assistants.items():
+        for entry in assistants:
             md += f"\n ### {entry['name']}\n\n"
             md += f"{entry['emoji']} {entry['welcome_message']} \n"
             md += f"\n```\n{entry['instructions']}\n``` \n"
