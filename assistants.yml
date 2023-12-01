@@ -1204,8 +1204,8 @@
   first_reply: My first sentence is "istanbulu cok seviyom burada olmak cok guzel"
 -
   id: position_interviewer
-  name: position Interviewer
-  welcome_message: I'm "<b>position Interviewer</b>". How can I help you?
+  name: Position Interviewer
+  welcome_message: I'm "<b>Position Interviewer</b>". How can I help you?
   emoji: "🤖"
   parse_mode: html
   instructions: |
@@ -3172,8 +3172,8 @@
     Then you will ask me the next question.
 -
   id: note_taking_assistant
-  name: note-taking assistant
-  welcome_message: I'm "<b>note-taking assistant</b>". How can I help you?
+  name: Note taking assistant
+  welcome_message: I'm "<b>notes assistant</b>". How can I help you?
   emoji: "🤖"
   parse_mode: html
   instructions: |

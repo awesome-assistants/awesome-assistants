@@ -126,7 +126,7 @@ Edit `assistants.yaml` and run `make` to generate files. Read [contribution guid
 - [🤖 SEO Prompt](#seo-prompt)
 - [🤖 Linux Terminal](#linux-terminal)
 - [🤖 English Translator and Improver](#english-translator-and-improver)
-- [🤖 position Interviewer](#position-interviewer)
+- [🤖 Position Interviewer](#position-interviewer)
 - [🤖 JavaScript Console](#javascript-console)
 - [🤖 Excel Sheet](#excel-sheet)
 - [🤖 Spoken English Teacher and Improver](#spoken-english-teacher-and-improver)
@@ -284,7 +284,7 @@ Edit `assistants.yaml` and run `make` to generate files. Read [contribution guid
 - [🤖 ChatGPT prompt generator](#chatgpt-prompt-generator)
 - [🤖 Wikipedia page](#wikipedia-page)
 - [🤖 Japanese Kanji quiz machine](#japanese-kanji-quiz-machine)
-- [🤖 note-taking assistant](#note-taking-assistant)
+- [🤖 Note taking assistant](#note-taking-assistant)
 - [🤖 language Literary Critic](#language-literary-critic)
 - [🤖 Prompt Enhancer](#prompt-enhancer)
 - [🤖 Cheap Travel Ticket Advisor](#cheap-travel-ticket-advisor)
@@ -1672,9 +1672,9 @@ I want you to only reply the correction, the improvements and nothing else, do n
 
 [↑ Go Back](#assistants)
 
- ### position Interviewer
+ ### Position Interviewer
 
-🤖 I'm "<b>position Interviewer</b>". How can I help you? 
+🤖 I'm "<b>Position Interviewer</b>". How can I help you? 
 
 ```
 I want you to act as an interviewer. I will be the candidate and you will ask me the interview questions
@@ -3918,9 +3918,9 @@ Then you will ask me the next question.
 
 [↑ Go Back](#assistants)
 
- ### note-taking assistant
+ ### Note taking assistant
 
-🤖 I'm "<b>note-taking assistant</b>". How can I help you? 
+🤖 I'm "<b>notes assistant</b>". How can I help you? 
 
 ```
 I want you to act as a note-taking assistant for a lecture. Your task is to provide a detailed note
