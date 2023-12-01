@@ -1,3 +1,4 @@
+import time
 import tablib
 import yaml
 import pathlib
@@ -25,6 +26,14 @@ class AwesomeAssistantsBuilder:
         with open(assistants_yml, 'r') as f:
             assistants = yaml.safe_load(f)
         return assistants
+
+    def get_assistant(self, search_id):
+        for x in self.get_assistants():
+            if x['id'] == search_id:
+                break
+        else:
+            x = None
+        return x
 
     def build(self):
         assistants = self.get_assistants()
@@ -62,7 +71,7 @@ class AwesomeAssistantsBuilder:
         assistants = self.get_assistants()
         md = ""
         for entry in assistants:
-            md += f"- [{entry['emoji']} {entry['name']}](#{entry['id'].replace('_', '-')})\n"
+            md += f"1. [{entry['emoji']} {entry['name']}](#{entry['id'].replace('_', '-')})\n"
 
         for entry in assistants:
             md += f"\n ### {entry['name']}\n\n"
