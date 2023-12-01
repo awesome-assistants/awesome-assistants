@@ -1,4 +1,3 @@
-import time
 import tablib
 import yaml
 import pathlib
