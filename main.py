@@ -21,14 +21,16 @@ class AwesomeAssistantsBuilder:
             self.update_readme()
 
     def get_assistants(self):
-        assistants_yml = pathlib.Path(__file__).parent.resolve().joinpath("assistants.yml")
-        with open(assistants_yml, 'r') as f:
+        assistants_yml = (
+            pathlib.Path(__file__).parent.resolve().joinpath("assistants.yml")
+        )
+        with open(assistants_yml, "r") as f:
             assistants = yaml.safe_load(f)
         return assistants
 
     def get_assistant(self, search_id):
         for x in self.get_assistants():
-            if x['id'] == search_id:
+            if x["id"] == search_id:
                 break
         else:
             x = None
@@ -37,34 +39,47 @@ class AwesomeAssistantsBuilder:
     def build(self):
         assistants = self.get_assistants()
         dataset = tablib.Dataset()
-        dataset.headers = ['id', 'name', 'emoji', 'welcome_message', 'instructions', 'parse_mode']
+        dataset.headers = [
+            "id",
+            "name",
+            "emoji",
+            "welcome_message",
+            "instructions",
+            "parse_mode",
+        ]
         for entry in assistants:
-            logger.debug(entry['id'])
-            dataset.append([entry['id'],
-                            entry['name'],
-                            entry['emoji'],
-                            entry['welcome_message'],
-                            entry['instructions'],
-                            entry['parse_mode']])
+            logger.debug(entry["id"])
+            dataset.append(
+                [
+                    entry["id"],
+                    entry["name"],
+                    entry["emoji"],
+                    entry["welcome_message"],
+                    entry["instructions"],
+                    entry["parse_mode"],
+                ]
+            )
 
-        self.to_file(dataset, 'csv')
-        self.to_file(dataset, 'yaml')
-        self.to_file(dataset, 'json')
-        self.to_file(dataset, 'html')
-        self.to_file(dataset, 'latex')
-        self.to_file(dataset, 'tsv')
+        self.to_file(dataset, "csv")
+        self.to_file(dataset, "yaml")
+        self.to_file(dataset, "json")
+        self.to_file(dataset, "html")
+        self.to_file(dataset, "latex")
+        self.to_file(dataset, "tsv")
 
     @staticmethod
-    def to_file(dataset, format, bin='w'):
+    def to_file(dataset, format, bin="w"):
         data = dataset.export(format)
-        with open(f'build/assistants.{format}', bin) as file:
+        with open(f"build/assistants.{format}", bin) as file:
             file.write(data)
 
     @staticmethod
     def replace_text_between(original_text, delimiter_a, delimiter_b, replacement_text):
         leading_text = original_text.split(delimiter_a)[0]
         trailing_text = original_text.split(delimiter_b)[1]
-        return leading_text + delimiter_a + replacement_text + delimiter_b + trailing_text
+        return (
+            leading_text + delimiter_a + replacement_text + delimiter_b + trailing_text
+        )
 
     def get_assistants_markdown(self):
         assistants = self.get_assistants()
@@ -84,22 +99,36 @@ class AwesomeAssistantsBuilder:
     def update_readme(self):
         readme_file = pathlib.Path(__file__).parent.resolve().joinpath("README.md")
         readme_stub = pathlib.Path(readme_file).read_text()
-        start = '[//]: # (START-contents)'
-        end = '[//]: # (END-contents)'
+        start = "[//]: # (START-contents)"
+        end = "[//]: # (END-contents)"
         toc_str = self.get_assistants_markdown()
-        readme = self.replace_text_between(readme_stub, start, end, "\n" + toc_str + "\n\n")
+        readme = self.replace_text_between(
+            readme_stub, start, end, "\n" + toc_str + "\n\n"
+        )
         if readme_stub != readme:
-            with open(readme_file, 'w') as f:
+            with open(readme_file, "w") as f:
                 f.write(readme)
         else:
-            logger.info('README.md is up to date.')
+            logger.info("README.md is up to date.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-e", "--export", dest="export",
-                        default=True, action='store_true', help="Build files")
-    parser.add_argument("-ur", "--update-readme", dest="update_readme",
-                        default=True, action='store_true', help="Update README.md file")
+    parser.add_argument(
+        "-e",
+        "--export",
+        dest="export",
+        default=True,
+        action="store_true",
+        help="Build files",
+    )
+    parser.add_argument(
+        "-ur",
+        "--update-readme",
+        dest="update_readme",
+        default=True,
+        action="store_true",
+        help="Update README.md file",
+    )
     aww = AwesomeAssistantsBuilder(parser.parse_args())
     aww.run()
