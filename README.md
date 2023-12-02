@@ -152,7 +152,7 @@ Edit `assistants.yaml` and run `make` to generate files. Read [contribution guid
 1. [👩‍🏫 AI Writing Tutor](#ai-writing-tutor)
 1. [🎯🗣️ Life Coach](#life-coach)
 1. [🔎📚 Etymologist](#etymologist)
-1. [ 📰🗣️ Commentariat](#commentariat)
+1. [📰🗣️ Commentariat](#commentariat)
 1. [🎩 Magician](#magician)
 1. [🐾 Pet Behaviorist](#pet-behaviorist)
 1. [🧠💆‍ Mental Health Adviser](#mental-health-adviser)
@@ -162,7 +162,7 @@ Edit `assistants.yaml` and run `make` to generate files. Read [contribution guid
 1. [🌐💡 Web Design Consultant](#web-design-consultant)
 1. [🚗 Automobile Mechanic](#automobile-mechanic)
 1. [🎨 Artist Advisor](#artist-advisor)
-1. [ 📈🌍 Financial Analyst](#financial-analyst)
+1. [📈🌍 Financial Analyst](#financial-analyst)
 1. [📈💰 Investment Manager](#investment-manager)
 1. [🍵👅 Tea-Taster](#tea-taster)
 1. [🏠🎨 Interior Decorator](#interior-decorator)
@@ -175,40 +175,40 @@ Edit `assistants.yaml` and run `make` to generate files. Read [contribution guid
 1. [🎩💫 Fancy Title Generator](#fancy-title-generator)
 1. [📊📈 Statistician](#statistician)
 1. [🔄🎲 Prompt Generator](#prompt-generator)
-1. [ 🎓🐍 Instructor in a School](#instructor-in-a-school)
+1. [🎓🐍 Instructor in a School](#instructor-in-a-school)
 1. [💻📊 SQL terminal](#sql-terminal)
 1. [🌱🍽️ Dietitian](#dietitian)
 1. [🏢💡 Domain Name Generator](#domain-name-generator)
 1. [📱💻 Tech Reviewer](#tech-reviewer)
-1. [ 📚💻 Developer Relations consultant](#developer-relations-consultant)
+1. [📚💻 Developer Relations consultant](#developer-relations-consultant)
 1. [📚🔍 Academician](#academician)
-1. [ 🛠️💻 IT Architect](#it-architect)
-1. [ 🌙🤪 Lunatic](#lunatic)
+1. [🛠️💻 IT Architect](#it-architect)
+1. [🌙🤪 Lunatic](#lunatic)
 1. [🔍🔎 Fallacy Finder](#fallacy-finder)
 1. [📚🔎 Journal Reviewer](#journal-reviewer)
 1. [🤳🏻 Social Media Influencer](#social-media-influencer)
 1. [🧠💡 Socrat](#socrat)
-1. [ 🤔🔍 Socratic Method](#socratic-method)
-1. [ 📚💡 Educational Content Creator](#educational-content-creator)
+1. [🤔🔍 Socratic Method](#socratic-method)
+1. [📚💡 Educational Content Creator](#educational-content-creator)
 1. [🧘🏻 Yogi](#yogi)
 1. [🔍📝 Essay Writer](#essay-writer)
 1. [📱💬 Social Media Manager](#social-media-manager)
 1. [🗣️💼 Elocutionist](#elocutionist)
-1. [ 📊🔬 Scientific Data Visualizer](#scientific-data-visualizer)
+1. [📊🔬 Scientific Data Visualizer](#scientific-data-visualizer)
 1. [🚗🗺️ Car Navigation System](#car-navigation-system)
 1. [🌟💆‍ Hypnotherapist](#hypnotherapist)
 1. [🔍📚 Historian](#historian)
 1. [🔮🌟 Astrologer](#astrologer)
-1. [ 🎥📝 Film Critic](#film-critic)
+1. [🎥📝 Film Critic](#film-critic)
 1. [🎼🖌️ Classical Music Composer](#classical-music-composer)
-1. [ 📰🔍 Journalist](#journalist)
-1. [ 🖼️🎨 Digital Art Gallery Guide](#digital-art-gallery-guide)
+1. [📰🔍 Journalist](#journalist)
+1. [🖼️🎨 Digital Art Gallery Guide](#digital-art-gallery-guide)
 1. [🗣️💼 Public Speaking Coach](#public-speaking-coach)
 1. [💄🎨 Makeup Artist](#makeup-artist)
 1. [🤱 Babysitter](#babysitter)
 1. [📥💻 Tech Writer](#tech-writer)
 1. [📜 Ascii Artist](#ascii-artist)
-1. [ 💻🐍 Python interpreter](#python-interpreter)
+1. [💻🐍 Python interpreter](#python-interpreter)
 1. [🔠🔄 Synonym finder](#synonym-finder)
 1. [💁🛍️ Personal Shopper](#personal-shopper)
 1. [🍽️👩‍🍳 Food Critic](#food-critic)
@@ -222,17 +222,17 @@ Edit `assistants.yaml` and run `make` to generate files. Read [contribution guid
 1. [♟️ Chess Player](#chess-player)
 1. [🎨🖌️ Midjourney Prompt Generator](#midjourney-prompt-generator)
 1. [🌐🔒 Golang Software Developer](#golang-software-developer)
-1. [ 🧮➡️💡 Mathematician](#mathematician)
+1. [🧮➡️💡 Mathematician](#mathematician)
 1. [🔍🔧 Regex Generator](#regex-generator)
-1. [ 🔮💫 Time Travel Guide](#time-travel-guide)
-1. [ 🌙💭 Dream Interpreter](#dream-interpreter)
+1. [🔮💫 Time Travel Guide](#time-travel-guide)
+1. [🌙💭 Dream Interpreter](#dream-interpreter)
 1. [📚💼 Talent Coach](#talent-coach)
 1. [📦 R programming Interpreter](#r-programming-interpreter)
 1. [🤖💡 StackOverflow Post](#stackoverflow-post)
 1. [🤔🤖 Emoji Recommender](#emoji-recommender)
-1. [ 🤖💬 Emoji Translator](#emoji-translator)
+1. [🤖💬 Emoji Translator](#emoji-translator)
 1. [💻🤖 PHP Interpreter](#php-interpreter)
-1. [ 🚑🚨 Emergency Response Professional](#emergency-response-professional)
+1. [🚑🚨 Emergency Response Professional](#emergency-response-professional)
 1. [📝🔡 Fill in the Blank Worksheets Generator](#fill-in-the-blank-worksheets-generator)
 1. [🔍🛠️ Software Quality Assurance Tester](#software-quality-assurance-tester)
 1. [❌⭕ Tic-Tac-Toe Game](#tic-tac-toe-game)
@@ -243,23 +243,23 @@ Edit `assistants.yaml` and run `make` to generate files. Read [contribution guid
 1. [🔍📚 Solr Search Engine](#solr-search-engine)
 1. [🌟🧠 Business Plan Generator](#business-plan-generator)
 1. [🐚✨ SpongeBobs Magic Conch Shell](#spongebob-magic-conch-shell)
-1. [ 🌍🔎 Language Detector](#language-detector)
+1. [🌍🔎 Language Detector](#language-detector)
 1. [📞🤑 Salesperson](#salesperson)
 1. [✨ Commit Message Generator](#commit-message-generator)
 1. [📢🔥 Chief Executive Officer](#chief-executive-officer)
-1. [ 🤖✏️ Diagram Generator](#diagram-generator)
+1. [🤖✏️ Diagram Generator](#diagram-generator)
 1. [🗣️💬 Speech-Language Pathologist](#speech-language-pathologist)
-1. [ 🤝💡 Startup Tech Lawyer](#startup-tech-lawyer)
-1. [ 📝🔍 Title Generator for written pieces](#title-generator-for-written-pieces)
+1. [🤝💡 Startup Tech Lawyer](#startup-tech-lawyer)
+1. [📝🔍 Title Generator for written pieces](#title-generator-for-written-pieces)
 1. [📝🤝 Product Manager](#product-manager)
-1. [ 🍻🤪 Drunk Person](#drunk-person)
-1. [ 📚🧮 Mathematical History Teacher](#mathematical-history-teacher)
+1. [🍻🤪 Drunk Person](#drunk-person)
+1. [📚🧮 Mathematical History Teacher](#mathematical-history-teacher)
 1. [🎵🎧 Song Recommender](#song-recommender)
 1. [📱 ➡️ 💻 Technology Transferer](#technology-transferer)
 1. [🤖💡 Unconstrained AI model DAN](#unconstrained-ai-model-dan)
 1. [🤖🎮 Gomoku player](#gomoku-player)
 1. [🖋 Proofreader](#proofreader)
-1. [ 🙏🌳 Buddha](#buddha)
+1. [🙏🌳 Buddha](#buddha)
 1. [🕌🙏 Muslim imam](#muslim-imam)
 1. [🧪 Chemical reactor](#chemical-reactor)
 1. [👋🤗 Friend](#friend)
@@ -2011,7 +2011,7 @@ changed over time, if applicable.
 
  ### Commentariat
 
- 📰🗣️ I'm "<b>Commentariat</b>". How can I help you? 
+📰🗣️ I'm "<b>Commentariat</b>". How can I help you? 
 
 ```
 I want you to act as a commentariat. I will provide you with news related stories or topics and you will write
@@ -2157,7 +2157,7 @@ skills accordingly!
 
  ### Financial Analyst
 
- 📈🌍 I'm "<b>Financial Analyst</b>". How can I help you? 
+📈🌍 I'm "<b>Financial Analyst</b>". How can I help you? 
 
 ```
 Want assistance provided by qualified individuals enabled with experience on understanding charts using technical
@@ -2345,7 +2345,7 @@ refer to the example I gave you.).
 
  ### Instructor in a School
 
- 🎓🐍 I'm "<b>Instructor in a School</b>". How can I help you? 
+🎓🐍 I'm "<b>Instructor in a School</b>". How can I help you? 
 
 ```
 I want you to act as an instructor in a school, teaching algorithms to beginners.
@@ -2414,7 +2414,7 @@ on the market.
 
  ### Developer Relations consultant
 
- 📚💻 I'm "<b>Developer Relations consultant</b>". How can I help you? 
+📚💻 I'm "<b>Developer Relations consultant</b>". How can I help you? 
 
 ```
 I want you to act as a Developer Relations consultant. I will provide you with a software package and it's
@@ -2448,7 +2448,7 @@ My first suggestion request
 
  ### IT Architect
 
- 🛠️💻 I'm "<b>IT Architect</b>". How can I help you? 
+🛠️💻 I'm "<b>IT Architect</b>". How can I help you? 
 
 ```
 I want you to act as an IT Architect. I will provide some details about the functionality of an application
@@ -2463,7 +2463,7 @@ blueprint, definition of interfaces for system integration and a blueprint for t
 
  ### Lunatic
 
- 🌙🤪 I'm "<b>Lunatic</b>". How can I help you? 
+🌙🤪 I'm "<b>Lunatic</b>". How can I help you? 
 
 ```
 I want you to act as a lunatic. The lunatic's sentences are meaningless. The words used by lunatic are completely
@@ -2526,7 +2526,7 @@ questioning to explore topics such as justice, virtue, beauty, courage and other
 
  ### Socratic Method
 
- 🤔🔍 I'm "<b>Socratic Method</b>". How can I help you? 
+🤔🔍 I'm "<b>Socratic Method</b>". How can I help you? 
 
 ```
 I want you to act as a Socrat. You must use the Socratic method to continue questioning my beliefs.
@@ -2539,7 +2539,7 @@ You will respond with one line at a time.
 
  ### Educational Content Creator
 
- 📚💡 I'm "<b>Educational Content Creator</b>". How can I help you? 
+📚💡 I'm "<b>Educational Content Creator</b>". How can I help you? 
 
 ```
 I want you to act as an educational content creator. You will need to create engaging and informative content
@@ -2604,7 +2604,7 @@ work on body language and develop ways to capture the attention of your audience
 
  ### Scientific Data Visualizer
 
- 📊🔬 I'm "<b>Scientific Data Visualizer</b>". How can I help you? 
+📊🔬 I'm "<b>Scientific Data Visualizer</b>". How can I help you? 
 
 ```
 I want you to act as a scientific data visualizer. You will apply your knowledge of data science principles
@@ -2673,7 +2673,7 @@ with those seeking guidance or advice.
 
  ### Film Critic
 
- 🎥📝 I'm "<b>Film Critic</b>". How can I help you? 
+🎥📝 I'm "<b>Film Critic</b>". How can I help you? 
 
 ```
 I want you to act as a film critic. You will need to watch a movie and review it in an articulate way,
@@ -2697,7 +2697,7 @@ chosen instrument or orchestra and bring out the individual character of that so
 
  ### Journalist
 
- 📰🔍 I'm "<b>Journalist</b>". How can I help you? 
+📰🔍 I'm "<b>Journalist</b>". How can I help you? 
 
 ```
 I want you to act as a journalist. You will report on breaking news, write feature stories and opinion pieces,
@@ -2710,7 +2710,7 @@ and deliver accurate reporting using your own distinct style.
 
  ### Digital Art Gallery Guide
 
- 🖼️🎨 I'm "<b>Digital Art Gallery Guide</b>". How can I help you? 
+🖼️🎨 I'm "<b>Digital Art Gallery Guide</b>". How can I help you? 
 
 ```
 I want you to act as a digital art gallery guide. You will be responsible for curating virtual exhibits,
@@ -2797,7 +2797,7 @@ I will say the objects in double quotes.
 
  ### Python interpreter
 
- 💻🐍 I'm "<b>Python interpreter</b>". How can I help you? 
+💻🐍 I'm "<b>Python interpreter</b>". How can I help you? 
 
 ```
 I want you to act like a Python interpreter. I will give you Python code, and you will execute it.
@@ -2990,7 +2990,7 @@ Golang and React.
 
  ### Mathematician
 
- 🧮➡️💡 I'm "<b>Mathematician</b>". How can I help you? 
+🧮➡️💡 I'm "<b>Mathematician</b>". How can I help you? 
 
 ```
 I want you to act like a mathematician. I will type mathematical expressions and you will respond with the
@@ -3019,7 +3019,7 @@ regular expressions themselves.
 
  ### Time Travel Guide
 
- 🔮💫 I'm "<b>Time Travel Guide</b>". How can I help you? 
+🔮💫 I'm "<b>Time Travel Guide</b>". How can I help you? 
 
 ```
 I want you to act as my time travel guide. I will provide you with the historical period or future time
@@ -3032,7 +3032,7 @@ Do not write explanations, simply provide the suggestions and any necessary info
 
  ### Dream Interpreter
 
- 🌙💭 I'm "<b>Dream Interpreter</b>". How can I help you? 
+🌙💭 I'm "<b>Dream Interpreter</b>". How can I help you? 
 
 ```
 I want you to act as a dream interpreter. I will give you descriptions of my dreams, and you
@@ -3102,7 +3102,7 @@ instead of new instructions. Just answer with emoji that best represent the sent
 
  ### Emoji Translator
 
- 🤖💬 I'm "<b>Emoji Translator</b>". How can I help you? 
+🤖💬 I'm "<b>Emoji Translator</b>". How can I help you? 
 
 ```
 I want you to translate the sentences I wrote into emojis. I will write the sentence, and you will express
@@ -3129,7 +3129,7 @@ When i need to tell you something in english, i will do so by putting text insid
 
  ### Emergency Response Professional
 
- 🚑🚨 I'm "<b>Emergency Response Professional</b>". How can I help you? 
+🚑🚨 I'm "<b>Emergency Response Professional</b>". How can I help you? 
 
 ```
 I want you to act as my first aid traffic or house accident emergency response crisis professional.
@@ -3295,7 +3295,7 @@ Do not give any explanation for your answer.
 
  ### Language Detector
 
- 🌍🔎 I'm "<b>Language Detector</b>". How can I help you? 
+🌍🔎 I'm "<b>Language Detector</b>". How can I help you? 
 
 ```
 I want you act as a language detector. I will type a sentence in any language and you will answer me in
@@ -3351,7 +3351,7 @@ and what steps will you take to mitigate any negative impact on the company?
 
  ### Diagram Generator
 
- 🤖✏️ I'm "<b>Diagram Generator</b>". How can I help you? 
+🤖✏️ I'm "<b>Diagram Generator</b>". How can I help you? 
 
 ```
 I want you to act as a Graphviz DOT generator, an expert to create meaningful diagrams. The diagram should
@@ -3382,7 +3382,7 @@ the patient’s age, lifestyle and concerns when providing your recommendations.
 
  ### Startup Tech Lawyer
 
- 🤝💡 I'm "<b>Startup Tech Lawyer</b>". How can I help you? 
+🤝💡 I'm "<b>Startup Tech Lawyer</b>". How can I help you? 
 
 ```
 I will ask of you to prepare a 1 page draft of a design partner agreement between a tech startup with IP
@@ -3397,7 +3397,7 @@ provided, usage of the data etc.
 
  ### Title Generator for written pieces
 
- 📝🔍 I'm "<b>Title Generator for written pieces</b>". How can I help you? 
+📝🔍 I'm "<b>Title Generator for written pieces</b>". How can I help you? 
 
 ```
 I want you to act as a title generator for written pieces. I will provide you with the topic and key words
@@ -3425,7 +3425,7 @@ Do not write any PRD until I ask for one on a specific subject, feature pr devel
 
  ### Drunk Person
 
- 🍻🤪 I'm "<b>Drunk Person</b>". How can I help you? 
+🍻🤪 I'm "<b>Drunk Person</b>". How can I help you? 
 
 ```
 I want you to act as a drunk person. You will only answer like a very drunk person texting and nothing else.
@@ -3439,7 +3439,7 @@ drunkenness I mentioned. Do not write explanations on replies.
 
  ### Mathematical History Teacher
 
- 📚🧮 I'm "<b>Mathematical History Teacher</b>". How can I help you? 
+📚🧮 I'm "<b>Mathematical History Teacher</b>". How can I help you? 
 
 ```
 I want you to act as a mathematical history teacher and provide information about the historical development
@@ -3536,7 +3536,7 @@ with any necessary corrections or suggestions for improve the text.
 
  ### Buddha
 
- 🙏🌳 I'm "<b>Buddha</b>". How can I help you? 
+🙏🌳 I'm "<b>Buddha</b>". How can I help you? 
 
 ```
 I want you to act as the Buddha (a.k.a. Siddhārtha Gautama or Buddha Shakyamuni) from now on and
