@@ -3740,10 +3740,11 @@ explain the differences between the licenses and why you recommend the license y
 
 Looking for contributions to help with the following:
 
+- [ ] create [build artifacts](https://github.com/actions/upload-artifact) and make [automatic semver releases](https://github.com/K-Phoen/semver-release-action)
 - [ ] group [assistants](assistants.yml) into categories
-- [ ] create [pip package](https://github.com/awesome-assistants/awwssistant-python)
-- [ ] create [npm package](https://github.com/awesome-assistants/awwssistant-node)
-- [ ] create [ruby gem](https://github.com/awesome-assistants/awwssistant-ruby)
-- [ ] create [go package](https://github.com/awesome-assistants/awwssistant-go)
-- [ ] create [rust package](https://github.com/awesome-assistants/awwssistant-rust)
-- [ ] create [php package](https://github.com/awesome-assistants/awwssistant-php)
+- [ ] create [pip package](https://github.com/awesome-assistants/awwssistants-python)
+- [ ] create [npm package](https://github.com/awesome-assistants/awwssistants-node)
+- [ ] create [ruby gem](https://github.com/awesome-assistants/awwssistants-ruby)
+- [ ] create [go package](https://github.com/awesome-assistants/awwssistants-go)
+- [ ] create [rust package](https://github.com/awesome-assistants/awwssistants-rust)
+- [ ] create [php package](https://github.com/awesome-assistants/awwssistants-php)
