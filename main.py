@@ -68,7 +68,9 @@ class AwesomeAssistantsBuilder:
 
     def get_assistants_markdown(self):
         assistants = self.get_assistants()
-        md = "".join(
+        md = ""
+        md += "\n" + "Total assistants: **" + str(len(assistants)) + "** \n\n"
+        md += "".join(
             f"1. [{entry['emoji']} {entry['name']}](#{entry['id'].replace('_', '-')})\n"
             for entry in assistants
         )

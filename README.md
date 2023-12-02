@@ -34,6 +34,9 @@ Edit `assistants.yaml` and run `make` to generate files. Read [contribution guid
 ## Assistants
 
 [//]: # (START-contents)
+
+Total assistants: **238** 
+
 1. [👩🏼‍🎓 General Assistant](#assistant)
 1. [🎯 Marketing Assistant](#marketing-assistant)
 1. [📢 Advertising Assistant](#advertising-assistant)
