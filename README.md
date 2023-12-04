@@ -4,7 +4,8 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/awesome-assistants/awesome-assistants/ci.yml.svg?branch=main)](https://github.com/awesome-assistants/awesome-assistants/actions?query=workflow:ci)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![LICENSE](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+![Stars](https://img.shields.io/github/stars/awesome-assistants)
 
 [![Awesome Assistants](https://raw.githubusercontent.com/awesome-assistants/.github/main/logo.svg)](https://github.com/awesome-assistants/awesome-assistants)
 
