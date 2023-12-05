@@ -10,7 +10,7 @@ def test_awesome_assistants():
         assert x["emoji"]
         assert x["name"]
         assert x["welcome_message"]
-        assert x["parse_mode"] in ['html', 'markdown']
+        assert x["parse_mode"] in ["html", "markdown"]
         if x["id"] != "empty":
             assert x["instructions"]
 
